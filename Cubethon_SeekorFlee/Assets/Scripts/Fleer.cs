@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seeker : MonoBehaviour
+public class Fleer : MonoBehaviour
 {
     public Vector3 velocity;
     public Rigidbody rb;
@@ -16,7 +16,7 @@ public class Seeker : MonoBehaviour
     void Update()
     {
         //get dir to the target
-        velocity = playerTarget.position - obstChar.position;
+        velocity = obstChar.position - playerTarget.position;
 
         // move on this dir at maxspeed
         velocity.Normalize();

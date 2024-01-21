@@ -943,6 +943,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4278391189716919618, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
   m_PrefabInstance: {fileID: 462890026}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1609068214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8223412797531382613, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+  m_PrefabInstance: {fileID: 1999509174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1609068215 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4614533123919250720, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+  m_PrefabInstance: {fileID: 1999509174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609068219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609068214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e26c1c8e3bac34a9c44dcf3b0d274e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  rb: {fileID: 1609068215}
+  current: 0
+  maxspeed: 3000
+  playerTarget: {fileID: 1802377167}
+  obstChar: {fileID: 108889997}
 --- !u!4 &1802377167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8456580249324729786, guid: 41dbf51d959e7864e8c8a28518d6ba07, type: 3}
@@ -1003,12 +1031,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223412797531382613, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
       propertyPath: m_Name
-      value: Obstacle (8)
+      value: flee
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8223412797531382613, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1609068219}
   m_SourcePrefab: {fileID: 100100000, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
 --- !u!4 &2102780849 stripped
 Transform:
@@ -1284,13 +1315,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223412797531382613, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
       propertyPath: m_Name
-      value: Obstacle
+      value: seeker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8223412797531382613, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6271332968752651645}
   m_SourcePrefab: {fileID: 100100000, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+--- !u!1 &6271332968752651643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8223412797531382613, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+  m_PrefabInstance: {fileID: 6271332968752651642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6271332968752651644 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4614533123919250720, guid: d08047fb5bb9bdd4fb9a81b818782cee, type: 3}
+  m_PrefabInstance: {fileID: 6271332968752651642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6271332968752651645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271332968752651643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1021830e1ecbf3049b53a9f4cf2f32b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  rb: {fileID: 6271332968752651644}
+  current: 0
+  maxspeed: 3000
+  playerTarget: {fileID: 1802377167}
+  obstChar: {fileID: 207829857}
 --- !u!1001 &6747513721443608751
 PrefabInstance:
   m_ObjectHideFlags: 0
